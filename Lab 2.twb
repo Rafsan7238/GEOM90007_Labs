@@ -695,6 +695,25 @@
   <mapsources>
     <mapsource name='Tableau' />
   </mapsources>
+  <shared-views>
+    <shared-view name='federated.0twqqs10rbpcqd10qrvzn11kzdgq'>
+      <datasources>
+        <datasource caption='Sample-Superstore' name='federated.0twqqs10rbpcqd10qrvzn11kzdgq' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0twqqs10rbpcqd10qrvzn11kzdgq'>
+        <column datatype='string' name='[Market]' role='dimension' type='nominal' />
+        <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
+        <column-instance column='[Market]' derivation='None' name='[none:Market:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Ship Mode]' derivation='None' name='[none:Ship Mode:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Market:nk]'>
+        <groupfilter function='level-members' level='[none:Market:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+      <filter class='categorical' column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Ship Mode:nk]'>
+        <groupfilter function='level-members' level='[none:Ship Mode:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
   <actions>
     <action caption='Highlight 1 (generated)' name='[Action1_D0F699698195461A956C6B7827D3E3BB]'>
       <activation auto-clear='true' type='on-select' />
@@ -726,9 +745,6 @@
             <column-instance column='[Ship Mode]' derivation='None' name='[none:Ship Mode:nk]' pivot='key' type='nominal' />
             <column-instance column='[Ship Date]' derivation='Month-Trunc' name='[tmn:Ship Date:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Market:nk]'>
-            <groupfilter function='level-members' level='[none:Market:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
           <manual-sort column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Order Priority:nk]' direction='ASC'>
             <dictionary>
               <bucket>&quot;Critical&quot;</bucket>
@@ -737,9 +753,6 @@
               <bucket>&quot;Low&quot;</bucket>
             </dictionary>
           </manual-sort>
-          <filter class='categorical' column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Ship Mode:nk]'>
-            <groupfilter function='level-members' level='[none:Ship Mode:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
           <manual-sort column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Ship Mode:nk]' direction='ASC'>
             <dictionary>
               <bucket>&quot;Same Day&quot;</bucket>
@@ -802,8 +815,10 @@
             <column datatype='string' name='[Category]' role='dimension' type='nominal' />
             <column datatype='string' name='[Market]' role='dimension' type='nominal' />
             <column datatype='integer' name='[Quantity]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Ship Mode]' role='dimension' type='nominal' />
             <column-instance column='[Category]' derivation='None' name='[none:Category:nk]' pivot='key' type='nominal' />
             <column-instance column='[Market]' derivation='None' name='[none:Market:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Ship Mode]' derivation='None' name='[none:Ship Mode:nk]' pivot='key' type='nominal' />
             <column-instance column='[Quantity]' derivation='Sum' name='[sum:Quantity:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <manual-sort column='[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Market:nk]' direction='ASC'>
@@ -815,6 +830,10 @@
               <bucket>&quot;Asia Pacific&quot;</bucket>
             </dictionary>
           </manual-sort>
+          <slices>
+            <column>[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Ship Mode:nk]</column>
+            <column>[federated.0twqqs10rbpcqd10qrvzn11kzdgq].[none:Market:nk]</column>
+          </slices>
           <aggregation value='true' />
         </view>
         <style>
