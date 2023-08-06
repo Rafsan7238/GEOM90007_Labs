@@ -536,7 +536,7 @@
     <mapsource name='Tableau' />
   </mapsources>
   <worksheets>
-    <worksheet name='Sheet 1'>
+    <worksheet name='Average Profit in France by Region (State)'>
       <table>
         <view>
           <datasources>
@@ -651,7 +651,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' maximized='true' name='Sheet 1'>
+    <window class='worksheet' maximized='true' name='Average Profit in France by Region (State)'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -689,7 +689,7 @@
     </window>
   </windows>
   <thumbnails>
-    <thumbnail height='384' name='Sheet 1' width='384'>
+    <thumbnail height='384' name='Average Profit in France by Region (State)' width='384'>
       iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAAgAElEQVR4nOy9WXMj15UtvHIekYmRAIeaVRrdlgdZumFbHXEd9ku/dPRz/8u+Ebbv193h
       QW27LUuyBl9LLalUA4sEiXnMOfN8D5nnKAECIMBiDaziimBIRQIJIHHO3vvsvfba3N++/pp4
