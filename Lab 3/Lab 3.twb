@@ -575,6 +575,13 @@
             <format attr='break-on-special' field='[federated.0ap24r40po7a741a77btx0b5ad83].[none:State:nk]' value='false' />
             <format attr='show-null-value-warning' field='[federated.0ap24r40po7a741a77btx0b5ad83].[none:State:nk]' value='false' />
           </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0ap24r40po7a741a77btx0b5ad83].[avg:Profit:qk]' value='Avg. Profit'>
+              <formatted-text>
+                <run>Avg. Profit</run>
+              </formatted-text>
+            </format>
+          </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='b01002_001e' value='false' />
             <format attr='enabled' id='b01002_002e' value='false' />
