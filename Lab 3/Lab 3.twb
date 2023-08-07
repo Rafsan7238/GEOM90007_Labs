@@ -981,6 +981,40 @@
       </table>
       <simple-id uuid='{B0D694ED-747F-426F-AB92-901ACAA1CB21}' />
     </worksheet>
+    <worksheet name='Sightings by Species'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Waterfowl_sites' name='federated.0jexl930cbq8d117fopv602volht' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0jexl930cbq8d117fopv602volht'>
+            <column caption='Genus' datatype='string' name='[genus]' role='dimension' type='nominal' />
+            <column-instance column='[genus]' derivation='None' name='[none:genus:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0jexl930cbq8d117fopv602volht].[none:genus:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{0536F132-441F-43D7-B8FE-71D64BD5D6B4}' />
+    </worksheet>
   </worksheets>
   <windows source-height='51'>
     <window class='worksheet' name='Average Profit in France by Region (State)'>
@@ -1055,6 +1089,29 @@
         <default-map-tool-selection tool='16' />
       </viewpoint>
       <simple-id uuid='{5B10AC08-F898-44A8-9500-B9FC749156E6}' />
+    </window>
+    <window class='worksheet' name='Sightings by Species'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2BA79F09-1090-473B-914B-4FCCD5FAC345}' />
     </window>
   </windows>
   <thumbnails>
@@ -4040,6 +4097,74 @@
       e553V0M7hmGYaxBCCGiapi47wzCElHJQ0/d9f6Bp75eCfjt0yUt+QX2/I2oUo4yg6zqEYchW
       DwzDvARivV5jtVqpoP6d0Y7/C6SUopp//9Kcyl209ip9DgzDMH8AU+iScE71HWMAAAAASUVO
       RK5CYII=
+    </thumbnail>
+    <thumbnail height='384' name='Sightings by Species' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAANnUlEQVR4nO3d3VJb973H4a+QLMSLCW4xduxmcEKcdFLaOJNyT/sS9k3sC9gXsg/3SWfa
+      mc40mdhO4sykwYa8GMsvRNhgJEDaBxlr6uZlF9sEN7/nOQGJxdKPEz6stbT+NEaj0SgAlDNx
+      0gMAcDIEAKAoAQAo6qUKwHA4zHA4POkxAEp4qQLQ6/Wyvb190mMAlPBSBQCAn48AABQlAABF
+      CQBAUQIAUJQAABQlAABFCQBAUQIA8CMODw+zt7eXw8PD597XYDDIzZs38/jx4wwGgx/cptfr
+      PbUawuHh4VM3x/7z15+XAAD8iK+++ioffvhhPvzww/z1r399rhBcv349k5OTaTab2djY+MFt
+      1tbWsr+/P348GAxy69at8eObN2/m4ODgmWf4Z60XtieAX5jhcJg33ngj58+fz5dffpm1tbWc
+      OXMmSbKxsZGVlZWsra1le3s7Fy9ezMWLF3Pjxo3s7Oyk1WplZWUlrVYrd+/ezddff51Go5HT
+      p0/n1KlTGY1G+fLLL9PtdvPrX/86r7/++vh19/b28umnn2YwGGRycnL8/OHhYW7cuJHd3d38
+      9re/zenTp8fbvf3222m1Wtna2sq9e/eytLSUXq/3g/t/whEAwL9gcXEx29vb6fV6uXbtWt5+
+      ++3cv38/jUYjq6ur2djYSL/fz4MHD/Lee+9lcXExa2trSZKFhYWcO3cu7733XmZnZ7O5uZnB
+      YJA7d+7k/fffz927d9Pv98evde3atbz11lv5wx/+kGaz+dQcS0tLuXLlSm7evJm1tbWcO3cu
+      77777jgEH3zwQS5cuJDJyckf3f8TAgDwL9jd3R3/Nf773/8+MzMzefToURYWFtJoNDI/P59+
+      v59Tp06l2Wxmfn4+e3t7SZJGozH++OTzJ7G4evVqRqPRU6d2RqNRZmdnx9s+0Ww2Mz09nXa7
+      ndFolIcPH2ZjYyOffPJJOp1OkmR5eTkLCws/uf8nBADgJ2xtbWV9fT3Xrl3L8vJykmRi4rtf
+      nQsLC/niiy+yvb2dbrebmZmZDAaD9Hq9fPzxx3n11Vd/dL9TU1OZmprK0tJSFhcXv/eX/ubm
+      ZjY3N3/yusPCwsJ4H3Nzc0/NNj09/ZP7T5LGy/Q/gbe2tsYlBThpu7u76Xa7mZyczNmzZ9Nq
+      tbKzs5NTp06l3W4nSe7du5e7d+9maWkp09PT+dOf/pTz589nYWEhv/rVr8b72traGl8/ePL5
+      zs5Ovvnmm8zNzeXcuXPp9Xo5ffp0RqNR1tbW0ul0Mjc3l1deeSVJxl9vNBrp9Xp55ZVX0u12
+      s729nQsXLqTdbqff72d2djZJvrf/fyYAAC/Qp59+mnfeeeekx/iXCABAUa4BABQlAABFCQBA
+      UQIAUJQAABQlAABFfW8xuOFwmG63exKz5PHjx+l0OnmJ3pkK8Iv1vQA0Go3xXWc/t4mJiSwu
+      Lp7IawNU84MBmJqaOolZfnC1OgCOh2sAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUA
+      AEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQ
+      lAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJ
+      AEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAA
+      FCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBR
+      AgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUA
+      AEUJAEBRAgBQlAAAFCUAAEUJAEBRrZMeAHh5DfYP88U3D056DI6JAAA/6v72bv7zv//3pMfg
+      mDgFBFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAU
+      JQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFEC
+      AFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAA
+      RQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCU
+      AAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkAQFECAFCUAAAUJQAARQkA
+      QFECAFCUAAAUdaQADAaD9Pv9jEaj45oHgJ9J6ygb//nPf86ZM2fy8OHDLC8v58KFC8c1FwDH
+      7EgB6HQ6uXLlSobDYf7yl79kcXExX3/9ddrtdnq9Xi5evJjPPvssrVYr77zzTh4/fpxbt26l
+      3+/nN7/5TS5cuJBGo3FcPwsAR/BM1wAmJiYyMzOT/f39rK+v5969e3nzzTdz/fr1vPvuu7l0
+      6VI+++yzPHr0KHNzc1ldXc36+noODw9f9PwAPKMjHQE8MRqNMhgM0mq1Mjk5mZWVlTQajTSb
+      zbTb7TSbzQwGgyTfHTVMTEyk0+lkOBy+0OEBeHZHCsD+/n42Nzdz586dzM7OptVqpdFojE/r
+      NBqNdLvdbG9vZ25uLkmyvb2dZrOZvb29tFrP1BsAjsGRTgFdvnw5/X4/ly5dyu9+97s0Go1c
+      vnx5/PX3338/vV4v7XY7b731VpLk0aNH2dnZyerqaiYmvOsU4GVxpD/JX3311e89d+bMmfHn
+      zWbzqSC02+0sLS3l7NmzzzEiAMfhWM/JLC4uHufuAXgOzskAFHWkAIxGo2xububGjRvZ29vL
+      3t7e97YZDofZ3Nx86rler5fd3d3nmxSAF+rIRwCff/55Xn/99ezv72dnZ2f8/JPlIUajUb76
+      6qunvufBgwdPbQvAyTvSNYC///3v2drayueff56LFy9mf38/+/v7uXr1aobDYV577bWnzvuv
+      r6/nzp076fV6uXLlygsfHoBnd6QjgDfffDPnz5/PyspKDg4Osru7m42Njbz22mv54x//mFu3
+      bo233d/fz+3bt7O6uprl5eUXPTcAz+mZ3gX0j+v5PH78ON1uN7dv3x7f/JUk/X4/s7OzT90o
+      BsDL47neBdRoNMYrgs7Pzz91o9f09HTu37+fW7duZWNj4/mmBOCFa4yOsLj/aDTK3t5epqam
+      cnBwkNFolFarld3d3ezu7mZubi7tdjv9fj+dTif9fj9bW1uZmZnJ1NTU/7sUxLfffpv5+fnn
+      /qGAF+P2/Yf5j//6n5Meg2NypFNAjUYjU1NT333jP/wyn5mZyczMzPhxp9NJkkxOTub8+fMv
+      Yk4AXjA3ggEUJQAARR0pAMPh0Jr+AL8QRwrAk/8FAMC/vyMfAezs7OTmzZvp9XpJvrsP4Mnj
+      0WiU7e3t7Ozs5MGDBzk8PMz6+nq63W6O8GYjAH4GR74G0O12Mz09nWvXrmU0GuWDDz7I6dOn
+      88knn6Tf7+dvf/tbrl+/nkajkY8++ijtdtuRA8BL6MgBuHTpUs6dO5dOp5PBYJCHDx/mzp07
+      GY1GefjwYU6dOpXV1dWcOXMmW1tb4yOBra2t45gfgGf0XP8QptVqZWZmJpcvX87BwUGazWY6
+      nU6azWaS7+4HWF5eTqPRyMHBwQsZGIAX40gBmJmZGa/rc/bs2UxMTOSNN97IRx99lGazmZWV
+      lSwsLIy3X1lZydWrV9NsNrO8vPzUzWIAnKwjLQVx3CwFAS8XS0H8srkRDKAoAQAoSgAAihIA
+      gKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAo
+      SgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIE
+      AKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAA
+      ihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAo
+      AQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoSgAAihIAgKIEAKAoAQAoqnXSAwAv
+      r4mJRk5Pt096DI5JYzQajU56iCe+/fbbzM/Pn/QYACU4BQRQlAAAFCUAAEUJAEBRAgBQlAAA
+      FCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBR
+      AgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUA
+      AEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQ
+      lAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJ
+      AEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAA
+      FCUAAEUJAEBRAgBQlAAAFCUAAEUJAEBRAgBQlAAAFPV/yGZRLRkXtekAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>
