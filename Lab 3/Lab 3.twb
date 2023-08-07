@@ -986,7 +986,7 @@
       </table>
       <simple-id uuid='{B0D694ED-747F-426F-AB92-901ACAA1CB21}' />
     </worksheet>
-    <worksheet name='Sightings by Prefacture'>
+    <worksheet name='Sightings by Prefecture'>
       <table>
         <view>
           <datasources>
@@ -1199,7 +1199,7 @@
       </viewpoint>
       <simple-id uuid='{2BA79F09-1090-473B-914B-4FCCD5FAC345}' />
     </window>
-    <window class='worksheet' maximized='true' name='Sightings by Prefacture'>
+    <window class='worksheet' maximized='true' name='Sightings by Prefecture'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -4214,7 +4214,7 @@
       DwzDvARivV5jtVqpoP6d0Y7/C6SUopp//9Kcyl209ip9DgzDMH8AU+iScE71HWMAAAAASUVO
       RK5CYII=
     </thumbnail>
-    <thumbnail height='384' name='Sightings by Prefacture' width='384'>
+    <thumbnail height='384' name='Sightings by Prefecture' width='384'>
       iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAAgAElEQVR4nOzdWXCUZ57v+e/75ial9hUkISRhQGJfCwPewAZsqgovXS53V/d0zMzFmTMX
       M9FzMdczcebizETMXHXMOdEnOqIrYuK0u6pttw1m32xsg2yDsSRAgNAGEmiXUltu7/LMhSCr
