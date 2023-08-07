@@ -736,6 +736,9 @@
       <column caption='Genus' datatype='string' name='[genus]' role='dimension' type='nominal' />
       <column caption='Lastinterp' datatype='string' name='[lastinterp]' role='dimension' type='nominal' />
       <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Prefacture' datatype='string' name='[recordedby - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0jexl930cbq8d117fopv602volht].[recordedby]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( [recordedby], &quot; &quot;, 1 ) )' />
+      </column>
       <column caption='Recordedby' datatype='string' name='[recordedby]' role='dimension' type='nominal' />
       <column caption='Species' datatype='string' name='[species]' role='dimension' type='nominal' />
       <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
