@@ -1067,7 +1067,9 @@
       <column caption='Unlicencsed' datatype='integer' name='[UNLICENCSED]' role='measure' type='quantitative' />
       <column caption='Vicgrid X' datatype='real' name='[VICGRID_X]' role='measure' type='quantitative' />
       <column caption='Vicgrid Y' datatype='real' name='[VICGRID_Y]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[X]' role='measure' type='quantitative' />
       <column caption='Young Driver' datatype='integer' name='[YOUNG_DRIVER]' role='measure' type='quantitative' />
+      <column datatype='real' hidden='true' name='[Y]' role='measure' type='quantitative' />
       <_.fcp.ObjectModelTableType.true...column caption='Vic Road Crash Data' datatype='table' name='[__tableau_internal_object_id__].[Road!Crashes!for!five!Years!Vic_BF2FCC92B6654172B9643572AE356979]' role='measure' type='quantitative' />
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <semantic-values>
