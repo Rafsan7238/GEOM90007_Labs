@@ -1,3 +1,4 @@
+# Exercise 1
 factorial <- function(n){
   
   if (n == 0){
@@ -13,4 +14,15 @@ factorial <- function(n){
   return (result)
 }
 
-factorial(0)
+user_factorial <- function(){
+  n = as.integer(readline('Please enter a positive number: '))
+
+  while (n < 0){
+    print("The number should be positive integer.")
+    n = as.integer(readline('Please enter a positive number: '))
+  }
+
+  factorial(n)
+}
+
+user_factorial()
