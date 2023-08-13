@@ -37,3 +37,18 @@ star_print <- function(n1){
   
 }
 star_print(5)
+
+# Exercise 3
+user_star <- function(){
+  
+  n1 = as.integer(readline('Please enter a number > 0: '))
+  
+  while (n1 < 1){
+    print("The number should be > 0.")
+    n1 = as.integer(readline('Please enter a positive number: '))
+  }
+  
+  star_print(n1)
+}
+
+user_star()
