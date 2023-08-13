@@ -1759,8 +1759,64 @@ display: none;
 <pre class="r"><code>data &lt;- read.csv(&#39;Birth Data.csv&#39;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Check Data</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaGVhZChkYXRhKVxuYGBgIn0= -->
+<pre class="r"><code>head(data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Nywic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFBNFZUVVcrYk1CQjJTQ0VwVXRkTit3UDlBUTdDMkE3MjQ2UnBqNVBXdFN1dlh1SzJxTlJVWU5RKzdwZDNPeHFiRURLcEQ0ZnZPOTk5OTkzSlhINHRhRnpFQ0tFNU9na0NOQS9CUmVIMTFiZVZRQkFCTUVNbjZMUS9YeURwTXpnTHNJOWdrYnM0LzY2ZkwzN1duYjIvdUZHVmJsMTQrYXZjMkxvcGxjUHhqMDVyMDFiS2JIM2hydWhMMTlwR1ZVUGlweHZkV3QyWW80dmxsV29mbFFGOEtDQ1NhOHdsOFVoa09KWE1velhCaEF1UGlNUnBubmxFR1diUzM0VWNyMGs2b1Y0U3lNZVVVVitTQzh5RUdKRkxTa2JraEF5WmxPS001M3R5enZJajNRTExkRDFRNXpqTDBoRjFUdm1JbXNsMFJNMnAzRlBuakJ4UmM4eTRIS2loWUQ4RFB5QWpBdk5zRUVFenpBYlVVNHQrSmYwRGlmN0E1My8yL3YzQk93cU5lb1JIc3RPNzhIMHY5VjFaRzU5U1pDbkp4MENNZ1J5QllXR3p3am56SWlHVGxxZE4vWno0dG1kZ2dkTWRUYlZ0S3RWNmJUNFliNVZWeVcwRDlZQmVKeVdMK3NtQ2NpZ0srcDhqbkJUUG1rbmd2RE85a3UxcWM5K1poeFZ4MjVzNU8zTm5OUElYdTViQlgwY1YrcVZwYzFjYTdiVlg2cmV1SFBnQUU3OE5uRHcxcGJGK0VvaTJpYTJ0OG5ueHBxNTg1RzAyOVBvUGVnTkEraE1FQUFBPSJ9 -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Region"],"name":[1],"type":["chr"],"align":["left"]},{"label":["X2017"],"name":[2],"type":["chr"],"align":["left"]},{"label":["X2018"],"name":[3],"type":["chr"],"align":["left"]},{"label":["X2019"],"name":[4],"type":["chr"],"align":["left"]},{"label":["X2020"],"name":[5],"type":["chr"],"align":["left"]},{"label":["X"],"name":[6],"type":["lgl"],"align":["right"]},{"label":["X.1"],"name":[7],"type":["lgl"],"align":["right"]}],"data":[{"1":"New South Wales","2":"96,591","3":"1,07,343","4":"98,906","5":"95,459","6":"NA","7":"NA","_rn_":"1"},{"1":"Victoria","2":"82,094","3":"78,488","4":"77,220","5":"73,543","6":"NA","7":"NA","_rn_":"2"},{"1":"Queensland","2":"61,158","3":"61,931","4":"61,735","5":"59,490","6":"NA","7":"NA","_rn_":"3"},{"1":"South Australia","2":"19,072","3":"19,113","4":"19,490","5":"18,526","6":"NA","7":"NA","_rn_":"4"},{"1":"Western Australia","2":"34,498","3":"33,257","4":"33,539","5":"32,426","6":"NA","7":"NA","_rn_":"5"},{"1":"Tasmania","2":"5,610","3":"5,547","4":"5,741","5":"5,780","6":"NA","7":"NA","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGFpbChkYXRhKVxuYGBgIn0= -->
+<pre class="r"><code>tail(data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImRhdGEuZnJhbWUiXSwibnJvdyI6NiwibmNvbCI6Nywic3VtbWFyeSI6W119LCJyZGYiOiJINHNJQUFBQUFBQUFBNFZUeVc3Yk1CQ2w3Y2hPREdScGMrMGhIMEFMb2locU9SWXRlaXpReEVGMVpXMDJGcXBRQmtXaDdhMWZubVRva2pLdEdNaGhwSG16UEw0WlViZWZTem92NXdpaENUb1pqOUVrQUJjRjk4c3ZpeHhCQk1BSW5hQXo4LzREUmRmZ3pNQ3V3S1kyTWYvV0NTSGJtc3UxalZ6ZU5aM2UzSHpzV3ExNFhYRWJmdmRkdEZvbytTcHh1dVR0STVjOWZ2KzFVWHBqS3BkQ3FVbzM2cS9OZk9oYjVjMG52cTAwcjcyYVExM1RsR0RDY29kSWdhTXNkb2dtT0NsY0xtQTRKWkVERk9lNXF3dFNIRWZaRWVLQ0VvK1lFTm9UVXh5emJFL01raDRrT0dMUlBrT3o1QWh4UnBsSG5CU1JSOHhvc1cvUEVySlhuREp2RmhaSFEySjJRRVZ5cUVsNzRoZ25QVExFdWJlS2pNV2U0alEzMzlzMC9ZUEhNWHM3ZjNDcEFza2ZSV3ZWenB5aVcvRlFOZEtWbEhGRU1oL2tQaWc4RUR2aG85STZreklrZ3lQUFZQTTdkTWVlNzVaa2JqOVVHUmFMelIwL0hXcGQxYngxV2wxd3Z1YWFoejhWOEFGNkdyVE1tcTJHU2FCcGZHM1ovZWFSR2dRdU8ybVVyUmVyVFNkL0xZamQ1c2phdVgxUFBYLzIvOGp4czZVSzNCS0ZmS2lrY05wci9rUFVGbHpBQm5ZTENMZXFrdHBOQXRFMjFBMzhVaTZ5YW1vWDJjMkdubDRBcUFtN2RUQUVBQUE9In0= -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Region"],"name":[1],"type":["chr"],"align":["left"]},{"label":["X2017"],"name":[2],"type":["chr"],"align":["left"]},{"label":["X2018"],"name":[3],"type":["chr"],"align":["left"]},{"label":["X2019"],"name":[4],"type":["chr"],"align":["left"]},{"label":["X2020"],"name":[5],"type":["chr"],"align":["left"]},{"label":["X"],"name":[6],"type":["lgl"],"align":["right"]},{"label":["X.1"],"name":[7],"type":["lgl"],"align":["right"]}],"data":[{"1":"Queensland","2":"61,158","3":"61,931","4":"61,735","5":"59,490","6":"NA","7":"NA","_rn_":"3"},{"1":"South Australia","2":"19,072","3":"19,113","4":"19,490","5":"18,526","6":"NA","7":"NA","_rn_":"4"},{"1":"Western Australia","2":"34,498","3":"33,257","4":"33,539","5":"32,426","6":"NA","7":"NA","_rn_":"5"},{"1":"Tasmania","2":"5,610","3":"5,547","4":"5,741","5":"5,780","6":"NA","7":"NA","_rn_":"6"},{"1":"Northern Territory","2":"3,882","3":"4,050","4":"3,658","5":"3,752","6":"NA","7":"NA","_rn_":"7"},{"1":"Australian Capital Territory","2":"6,207","3":"5,374","4":"5,520","5":"5,368","6":"NA","7":"NA","_rn_":"8"}],"options":{"columns":{"min":{},"max":[10],"total":[7]},"rows":{"min":[10],"max":[10],"total":[6]},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtbWFyeShkYXRhKVxuYGBgIn0= -->
+<pre class="r"><code>summary(data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgIFJlZ2lvbiAgICAgICAgICAgICBYMjAxNyAgICAgICAgICAgICAgWDIwMTggICAgICAgICAgICAgIFgyMDE5ICAgICAgICAgICAgICBYMjAyMCAgICAgICAgICBcbiBMZW5ndGg6OCAgICAgICAgICAgTGVuZ3RoOjggICAgICAgICAgIExlbmd0aDo4ICAgICAgICAgICBMZW5ndGg6OCAgICAgICAgICAgTGVuZ3RoOjggICAgICAgICAgXG4gQ2xhc3MgOmNoYXJhY3RlciAgIENsYXNzIDpjaGFyYWN0ZXIgICBDbGFzcyA6Y2hhcmFjdGVyICAgQ2xhc3MgOmNoYXJhY3RlciAgIENsYXNzIDpjaGFyYWN0ZXIgIFxuIE1vZGUgIDpjaGFyYWN0ZXIgICBNb2RlICA6Y2hhcmFjdGVyICAgTW9kZSAgOmNoYXJhY3RlciAgIE1vZGUgIDpjaGFyYWN0ZXIgICBNb2RlICA6Y2hhcmFjdGVyICBcbiAgICBYICAgICAgICAgICAgIFguMSAgICAgICAgIFxuIE1vZGU6bG9naWNhbCAgIE1vZGU6bG9naWNhbCAgXG4gTkEnczo4ICAgICAgICAgTkEnczo4ICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFxuIn0= -->
+<pre><code>    Region             X2017              X2018              X2019              X2020          
+ Length:8           Length:8           Length:8           Length:8           Length:8          
+ Class :character   Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+    X             X.1         
+ Mode:logical   Mode:logical  
+ NA&#39;s:8         NA&#39;s:8        
+                              </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoZGF0YSlcbmBgYCJ9 -->
+<pre class="r"><code>names(data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiUmVnaW9uXCIgXCJYMjAxN1wiICBcIlgyMDE4XCIgIFwiWDIwMTlcIiAgXCJYMjAyMFwiICBcIlhcIiAgICAgIFwiWC4xXCIgICBcbiJ9 -->
+<pre><code>[1] &quot;Region&quot; &quot;X2017&quot;  &quot;X2018&quot;  &quot;X2019&quot;  &quot;X2020&quot;  &quot;X&quot;      &quot;X.1&quot;   </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNvbChkYXRhKVxuYGBgIn0= -->
+<pre class="r"><code>ncol(data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDdcbiJ9 -->
+<pre><code>[1] 7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubnJvdyhkYXRhKVxuYGBgIn0= -->
+<pre class="r"><code>nrow(data)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDhcbiJ9 -->
+<pre><code>[1] 8</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkRhdGEgUmVhZAoKYGBge3J9CmRhdGEgPC0gcmVhZC5jc3YoJ0JpcnRoIERhdGEuY3N2JykKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkRhdGEgUmVhZAoKYGBge3J9CmRhdGEgPC0gcmVhZC5jc3YoJ0JpcnRoIERhdGEuY3N2JykKYGBgCgpDaGVjayBEYXRhCgpgYGB7cn0KaGVhZChkYXRhKQp0YWlsKGRhdGEpCnN1bW1hcnkoZGF0YSkKbmFtZXMoZGF0YSkKbmNvbChkYXRhKQpucm93KGRhdGEpCmBgYAo=</div>
 
 
 

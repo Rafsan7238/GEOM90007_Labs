@@ -8,3 +8,14 @@ Data Read
 ```{r}
 data <- read.csv('Birth Data.csv')
 ```
+
+Check Data
+
+```{r}
+head(data)
+tail(data)
+summary(data)
+names(data)
+ncol(data)
+nrow(data)
+```
