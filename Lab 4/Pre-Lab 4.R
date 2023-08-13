@@ -52,3 +52,35 @@ user_star <- function(){
 }
 
 user_star()
+
+# Exercise 4
+user_star_v2 <- function(){
+  
+  n2 = as.integer(readline('Please enter a number > 0: '))
+  
+  while (n2 < 1){
+    print("The number should be > 0.")
+    n2 = as.integer(readline('Please enter a positive number: '))
+  }
+  
+  n = ceiling(n2/2)
+  
+  for (i in 1:n){
+    cat(strrep(' ', n-i), strrep('*', i*2-1), '\n')
+  }
+  
+  if (n2 %% 2 == 0){
+    for (i in n:1){
+      cat(strrep(' ', n-i), strrep('*', i*2-1), '\n')
+    }
+  }
+  
+  else{
+    for (i in (n-1):1){
+      cat(strrep(' ', n-i), strrep('*', i*2-1), '\n')
+    }
+  }
+  
+}
+
+user_star_v2()
