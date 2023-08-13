@@ -26,3 +26,14 @@ user_factorial <- function(){
 }
 
 user_factorial()
+
+
+# Exercise 2
+star_print <- function(n1){
+  
+  for (i in 1:n1){
+    print(strrep('*', i), quote = FALSE)
+  }
+  
+}
+star_print(5)
