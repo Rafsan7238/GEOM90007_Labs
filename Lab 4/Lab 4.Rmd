@@ -62,3 +62,15 @@ barplot(data$X2017)
 ```{r}
 barplot(data$X2017, names=data$Region, las=3)
 ```
+
+```{r}
+data$X2018 = as.numeric(gsub(",", "", data$X2018))
+matrix = rbind(data$X2017, data$X2018)
+```
+
+```{r}
+barplot(matrix, beside = TRUE, horiz = TRUE, names = data$Region, col = c("blue", "green"), main = "Births in Different Regions of Australia",
+        xlab = "Number of Births", ylab = "Region", las = 1)
+
+legend("topright", legend = c("2017", "2018"), fill = c("blue", "green"))
+```
