@@ -29,3 +29,26 @@ class(data)
 ```{r}
 class(data$X2017)
 ```
+
+Data Wrangling
+
+```{r}
+data$X2017
+
+as.numeric(data$X2017)
+```
+
+```{r}
+as.numeric("31234")
+
+as.numeric("31,234")
+```
+
+```{r}
+as.numeric(gsub(",", "", data$X2017))
+```
+
+```{r}
+data$X2017 = as.numeric(gsub(",", "", data$X2017))
+data$X2017
+```

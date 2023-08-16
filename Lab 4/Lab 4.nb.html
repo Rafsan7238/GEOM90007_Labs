@@ -1836,8 +1836,68 @@ display: none;
 <pre><code>[1] &quot;character&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Data Wrangling</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YSRYMjAxN1xuYGBgIn0= -->
+<pre class="r"><code>data$X2017</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiOTYsNTkxXCIgXCI4MiwwOTRcIiBcIjYxLDE1OFwiIFwiMTksMDcyXCIgXCIzNCw0OThcIiBcIjUsNjEwXCIgIFwiMyw4ODJcIiAgXCI2LDIwN1wiIFxuIn0= -->
+<pre><code>[1] &quot;96,591&quot; &quot;82,094&quot; &quot;61,158&quot; &quot;19,072&quot; &quot;34,498&quot; &quot;5,610&quot;  &quot;3,882&quot;  &quot;6,207&quot; </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhkYXRhJFgyMDE3KVxuYGBgIn0= -->
+<pre class="r"><code>as.numeric(data$X2017)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogTkFzIGludHJvZHVjZWQgYnkgY29lcmNpb25cbiJ9 -->
+<pre><code>Warning: NAs introduced by coercion</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5BIE5BIE5BIE5BIE5BIE5BIE5BIE5BXG4ifQ== -->
+<pre><code>[1] NA NA NA NA NA NA NA NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhcIjMxMjM0XCIpXG5gYGAifQ== -->
+<pre class="r"><code>as.numeric(&quot;31234&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDMxMjM0XG4ifQ== -->
+<pre><code>[1] 31234</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhcIjMxLDIzNFwiKVxuYGBgIn0= -->
+<pre class="r"><code>as.numeric(&quot;31,234&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogTkFzIGludHJvZHVjZWQgYnkgY29lcmNpb25cbiJ9 -->
+<pre><code>Warning: NAs introduced by coercion</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIE5BXG4ifQ== -->
+<pre><code>[1] NA</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXMubnVtZXJpYyhnc3ViKFwiLFwiLCBcIlwiLCBkYXRhJFgyMDE3KSlcbmBgYCJ9 -->
+<pre class="r"><code>as.numeric(gsub(&quot;,&quot;, &quot;&quot;, data$X2017))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDk2NTkxIDgyMDk0IDYxMTU4IDE5MDcyIDM0NDk4ICA1NjEwICAzODgyICA2MjA3XG4ifQ== -->
+<pre><code>[1] 96591 82094 61158 19072 34498  5610  3882  6207</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGF0YSRYMjAxNyA9IGFzLm51bWVyaWMoZ3N1YihcIixcIiwgXCJcIiwgZGF0YSRYMjAxNykpXG5kYXRhJFgyMDE3XG5gYGAifQ== -->
+<pre class="r"><code>data$X2017 = as.numeric(gsub(&quot;,&quot;, &quot;&quot;, data$X2017))
+data$X2017</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDk2NTkxIDgyMDk0IDYxMTU4IDE5MDcyIDM0NDk4ICA1NjEwICAzODgyICA2MjA3XG4ifQ== -->
+<pre><code>[1] 96591 82094 61158 19072 34498  5610  3882  6207</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkRhdGEgUmVhZAoKYGBge3J9CmRhdGEgPC0gcmVhZC5jc3YoJ0JpcnRoIERhdGEuY3N2JykKYGBgCgpDaGVjayBEYXRhCgpgYGB7cn0KaGVhZChkYXRhKQp0YWlsKGRhdGEpCnN1bW1hcnkoZGF0YSkKbmFtZXMoZGF0YSkKbmNvbChkYXRhKQpucm93KGRhdGEpCmBgYAoKQ2hlY2sgRGF0YSBUeXBlcwoKYGBge3J9CmNsYXNzKGRhdGEpCmBgYAoKYGBge3J9CmNsYXNzKGRhdGEkWDIwMTcpCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDQiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCkRhdGEgUmVhZAoKYGBge3J9CmRhdGEgPC0gcmVhZC5jc3YoJ0JpcnRoIERhdGEuY3N2JykKYGBgCgpDaGVjayBEYXRhCgpgYGB7cn0KaGVhZChkYXRhKQp0YWlsKGRhdGEpCnN1bW1hcnkoZGF0YSkKbmFtZXMoZGF0YSkKbmNvbChkYXRhKQpucm93KGRhdGEpCmBgYAoKQ2hlY2sgRGF0YSBUeXBlcwoKYGBge3J9CmNsYXNzKGRhdGEpCmBgYAoKYGBge3J9CmNsYXNzKGRhdGEkWDIwMTcpCmBgYAoKRGF0YSBXcmFuZ2xpbmcKCmBgYHtyfQpkYXRhJFgyMDE3Cgphcy5udW1lcmljKGRhdGEkWDIwMTcpCmBgYAoKYGBge3J9CmFzLm51bWVyaWMoIjMxMjM0IikKCmFzLm51bWVyaWMoIjMxLDIzNCIpCmBgYAoKYGBge3J9CmFzLm51bWVyaWMoZ3N1YigiLCIsICIiLCBkYXRhJFgyMDE3KSkKYGBgCgpgYGB7cn0KZGF0YSRYMjAxNyA9IGFzLm51bWVyaWMoZ3N1YigiLCIsICIiLCBkYXRhJFgyMDE3KSkKZGF0YSRYMjAxNwpgYGAK</div>
 
 
 
