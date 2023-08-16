@@ -52,3 +52,13 @@ as.numeric(gsub(",", "", data$X2017))
 data$X2017 = as.numeric(gsub(",", "", data$X2017))
 data$X2017
 ```
+
+Bar Plot
+
+```{r}
+barplot(data$X2017)
+```
+
+```{r}
+barplot(data$X2017, names=data$Region, las=3)
+```
