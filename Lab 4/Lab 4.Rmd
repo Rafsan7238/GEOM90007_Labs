@@ -19,3 +19,13 @@ names(data)
 ncol(data)
 nrow(data)
 ```
+
+Check Data Types
+
+```{r}
+class(data)
+```
+
+```{r}
+class(data$X2017)
+```
