@@ -74,3 +74,34 @@ barplot(matrix, beside = TRUE, horiz = TRUE, names = data$Region, col = c("blue"
 
 legend("topright", legend = c("2017", "2018"), fill = c("blue", "green"))
 ```
+
+Line Plot
+
+```{r}
+data$X2019 = as.numeric(gsub(",", "", data$X2019))
+data$X2020 = as.numeric(gsub(",", "", data$X2020))
+```
+
+```{r}
+plot(c(2017:2020), data[2, 2:5], type="o", col="red", xlab="Year", ylab="Birth number", main="The number of births in Victoria")
+```
+
+```{r}
+plot(c(2017:2020), data[2, 2:5], type="o", col="red", xaxt="n", xlab="Year", ylab="Birth number", main="The number of births in Victoria")
+
+axis(1,at=c("2017", "2018", "2019", "2020"))
+```
+
+```{r}
+plot(2017:2020, data[1, 2:5], type = "l", xlab = "Year", ylab = "Number of Births",
+     main = "Number of Births in Each State of Australia (2017-2020)", xaxt = "n", ylim = range(c(1:110000)))
+
+# Add lines for each state
+for (i in 2:8) {
+  lines(2017:2020, data[i, 2:5], type = "o", pch = i, col = i)
+}
+
+axis(1,at=c("2017", "2018", "2019", "2020"))
+
+legend("topright", legend = data$Region, col = 1:8, pch = 1:8, title = "States")
+```
