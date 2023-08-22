@@ -16,5 +16,11 @@ class(auMap)
 Map Conversion
 
 ```{r}
-fortify(auMap)
+auMapDf <- fortify(auMap)
+```
+
+Plot Map
+
+```{r}
+ggplot(auMapDf) + aes(long, lat, group=group) + geom_polygon()
 ```
