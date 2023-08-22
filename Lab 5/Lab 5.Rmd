@@ -6,11 +6,15 @@ output: html_notebook
 Load Data
 
 ```{r}
-auMap <- readOGR(dsn="IV-lab-5-data/SpatialData/SpatialData.shp", "SpatialData")
+auMap <- readOGR(dsn="IV-lab-5-data/SpatialData", "SpatialData")
 ```
 
-Plot Map
+```{r}
+class(auMap)
+```
+
+Map Conversion
 
 ```{r}
-
+fortify(auMap)
 ```
