@@ -164,3 +164,9 @@ auBirthMapDf$quantile <- findInterval(quantiles$var, quantiles$brks)
 
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=quantile) + geom_polygon() + coord_equal()
 ```
+
+Discrete Legend
+
+```{r}
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=rank) + geom_polygon() + coord_equal() + scale_fill_continuous(guide="legend") 
+```
