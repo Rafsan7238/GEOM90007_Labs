@@ -113,3 +113,7 @@ auMapDf
 ```{r}
 auBirth
 ```
+
+```{r}
+auBirthMapDf <- merge(auMapDf, auBirth, by.x="id", by.y="id")
+```
