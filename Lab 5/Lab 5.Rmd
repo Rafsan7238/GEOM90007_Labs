@@ -170,3 +170,15 @@ Discrete Legend
 ```{r}
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=rank) + geom_polygon() + coord_equal() + scale_fill_continuous(guide="legend") 
 ```
+
+Broken Commands
+
+```{r}
+m0 <- ggplot(auBirthMapDf)
+m1 <- aes(long, lat, group=group, fill=rank)
+m2 <- geom_polygon()
+m3 <- scale_fill_continuous(guide="legend")
+m4 <- coord_equal()
+
+m0 + m1 + m2 + m3 + m4
+```
