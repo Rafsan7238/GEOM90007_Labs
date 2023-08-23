@@ -155,3 +155,12 @@ auBirthMapDf$rank <- findInterval(intervals$var, intervals$brks)
 
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=rank) + geom_polygon() + coord_equal()
 ```
+
+```{r}
+# Try quantile classification
+quantiles <- classIntervals(auBirthMapDf$X2017, n=4, style="quantile")
+
+auBirthMapDf$quantile <- findInterval(quantiles$var, quantiles$brks)
+
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=quantile) + geom_polygon() + coord_equal()
+```
