@@ -71,3 +71,8 @@ Pre-Lab 2
 ```{r}
 auBirth_long_new <- auBirth %>% gather(key=Year, value=Births, -Region, -id)
 ```
+
+```{r}
+ggplot(auBirth_long) + aes(x=Year, y=Births, group=id, color=Region) +
+  geom_line()
+```
