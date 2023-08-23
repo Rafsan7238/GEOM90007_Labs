@@ -203,3 +203,9 @@ Add Borderline
 ```{r}
 m0 + m1 + m2 + m4 + scale_fill_brewer(type="seq", palette=7) + geom_path(color='black')
 ```
+
+Map Theme
+
+```{r}
+m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='dark grey') + theme(panel.background = element_rect(fill="white"))
+```
