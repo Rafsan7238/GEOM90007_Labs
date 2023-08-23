@@ -36,3 +36,8 @@ Pre-Lab 1
 ```{r}
 auBirth <- read.csv("IV-lab-5-data-new/Births_summary_with_id.csv", stringsAsFactors = FALSE)
 ```
+
+```{r}
+ggplot(auBirth) + aes(x=Region, y=X2017) +
+  geom_bar(stat="identity")
+```
