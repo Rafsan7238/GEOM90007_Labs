@@ -130,3 +130,8 @@ Map Projections
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() +
   coord_equal()
 ```
+
+```{r}
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() +
+  coord_map("stereographic")
+```
