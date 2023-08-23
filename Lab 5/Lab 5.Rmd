@@ -215,3 +215,7 @@ Exercise 2
 ```{r}
 m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='dark grey') + theme(panel.background = element_rect(fill="white")) + labs(fill = "No. of Births in 2017")
 ```
+
+```{r}
+m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='dark grey') + theme(panel.background = element_rect(fill="white")) + labs(fill = "Births", title = "No. of Births in Australia in 2017") + theme(plot.title = element_text(size = 16, hjust = 0.5))
+```
