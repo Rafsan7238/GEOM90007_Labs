@@ -182,3 +182,18 @@ m4 <- coord_equal()
 
 m0 + m1 + m2 + m3 + m4
 ```
+
+Color Brewer
+
+```{r}
+# Change rank to ordinal
+level = c('very low', 'low', 'medium', 'high', 'very high')
+auBirthMapDf$rank <- factor(auBirthMapDf$rank, levels = 1:5, labels = level)
+
+# Same code as before
+m0<- ggplot(auBirthMapDf)
+m1 <- aes(long, lat, group=group, fill=rank)
+m2 <- geom_polygon()
+# Last piece of code specifying how the legend is build up is different
+m0 + m1 + m2 + scale_fill_brewer(type="seq", palette=7) + m4
+```
