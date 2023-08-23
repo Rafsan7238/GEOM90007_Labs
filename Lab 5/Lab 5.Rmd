@@ -6,11 +6,17 @@ output: html_notebook
 Load Data
 
 ```{r}
-auMap <- readOGR(dsn="IV-lab-5-data/SpatialData", "SpatialData")
+auMap <- readOGR(dsn="IV-lab-5-data-new/SpatialData/AusStates.shp")
 ```
 
 ```{r}
 class(auMap)
+```
+
+Plot Map with rgdal
+
+```{r}
+plot(auMap)
 ```
 
 Map Conversion
