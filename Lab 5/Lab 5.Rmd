@@ -213,13 +213,28 @@ m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='d
 Exercise 2
 
 ```{r}
+# Change legend labels
 m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='dark grey') + theme(panel.background = element_rect(fill="white")) + labs(fill = "No. of Births in 2017")
 ```
 
 ```{r}
+# Add plot title
 m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='dark grey') + theme(panel.background = element_rect(fill="white")) + labs(fill = "Births", title = "No. of Births in Australia in 2017") + theme(plot.title = element_text(size = 16, hjust = 0.5))
 ```
 
 ```{r}
+# Fix state boundaries
 m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='black', linewidth = 0.2) + theme(panel.background = element_rect(fill="white")) + labs(fill = "Births", title = "No. of Births in Australia in 2017") + theme(plot.title = element_text(size = 16, hjust = 0.5))
+```
+
+```{r}
+# Remove axes
+m5 <- theme(axis.title.x = element_blank(),
+           axis.text.x = element_blank(),
+           axis.ticks.x = element_blank(),
+           axis.title.y = element_blank(),
+           axis.text.y = element_blank(),
+           axis.ticks.y = element_blank())
+
+m0 + m1 + m2 + m4+ scale_fill_brewer(type="seq", palette=7) + geom_path(color='black', linewidth = 0.2) + theme(panel.background = element_rect(fill="white")) + labs(fill = "Births", title = "No. of Births in Australia in 2017") + theme(plot.title = element_text(size = 16, hjust = 0.5)) + m5
 ```
