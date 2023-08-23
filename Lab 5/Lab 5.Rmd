@@ -123,3 +123,10 @@ Choropleth Map
 ```{r}
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon()
 ```
+
+Map Projections
+
+```{r}
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() +
+  coord_equal()
+```
