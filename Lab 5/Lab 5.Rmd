@@ -30,3 +30,9 @@ Plot Map
 ```{r}
 ggplot(auMapDf) + aes(long, lat, group=group) + geom_polygon()
 ```
+
+Pre-Lab 1
+
+```{r}
+auBirth <- read.csv("IV-lab-5-data-new/Births_summary_with_id.csv", stringsAsFactors = FALSE)
+```
