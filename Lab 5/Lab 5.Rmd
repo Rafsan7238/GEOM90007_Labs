@@ -135,3 +135,8 @@ ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() 
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() +
   coord_map("stereographic")
 ```
+
+```{r}
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() +
+  coord_map("conic", lat0 = -30)
+```
