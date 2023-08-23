@@ -103,5 +103,3 @@ ggplot(auBirth_long_new, aes(x = Year, y = Births, group = id, color = Region)) 
         panel.grid.minor = element_line(color = "white")) +
   guides(color = guide_legend(override.aes = list(size = 2)))  # Adjust legend symbol size
 ```
-
-\
