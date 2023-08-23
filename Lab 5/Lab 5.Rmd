@@ -117,3 +117,9 @@ auBirth
 ```{r}
 auBirthMapDf <- merge(auMapDf, auBirth, by.x="id", by.y="id")
 ```
+
+Choropleth Map
+
+```{r}
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon()
+```
