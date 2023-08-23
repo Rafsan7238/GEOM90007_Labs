@@ -52,3 +52,16 @@ auBirth_long <- auBirth_long[order(-auBirth_long$Births),]
 # Create a custom color palette
 my_colors <- c("#1f77b4", "#ff7f0e", "#2ca02c", "#d62728")
 ```
+
+```{r}
+# Plot a horizontal bar chart with additional customizations
+ggplot(auBirth_long, aes(x = Births, y = Region, fill = Year)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_fill_manual(values = my_colors) +
+  labs(title = "Births by Region in Australia (2017-2020)",
+       x = "Number of Births",
+       y = "Region") +
+  theme_minimal() +
+  theme(legend.position = "top") +
+  guides(fill = guide_legend(title = "Year"))
+```
