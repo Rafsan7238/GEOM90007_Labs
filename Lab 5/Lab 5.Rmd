@@ -197,3 +197,9 @@ m2 <- geom_polygon()
 # Last piece of code specifying how the legend is build up is different
 m0 + m1 + m2 + scale_fill_brewer(type="seq", palette=7) + m4
 ```
+
+Add Borderline
+
+```{r}
+m0 + m1 + m2 + m4 + scale_fill_brewer(type="seq", palette=7) + geom_path(color='black')
+```
