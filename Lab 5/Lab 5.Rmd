@@ -65,3 +65,9 @@ ggplot(auBirth_long, aes(x = Births, y = Region, fill = Year)) +
   theme(legend.position = "top") +
   guides(fill = guide_legend(title = "Year"))
 ```
+
+Pre-Lab 2
+
+```{r}
+auBirth_long_new <- auBirth %>% gather(key=Year, value=Births, -Region, -id)
+```
