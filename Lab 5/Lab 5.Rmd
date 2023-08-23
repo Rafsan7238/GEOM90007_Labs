@@ -140,3 +140,18 @@ ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() 
 ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=X2017) + geom_polygon() +
   coord_map("conic", lat0 = -30)
 ```
+
+Classification
+
+```{r}
+# Compute the class breaks (number of births in each class) using the equal interval method
+intervals <- classIntervals(auBirthMapDf$X2017, n=4, style="equal")
+
+# Classify the data using these class breaks and store the classified data as a new column in the data frame
+
+auBirthMapDf$rank <- findInterval(intervals$var, intervals$brks)
+
+# Replot the data with the changed classification:
+
+ggplot(auBirthMapDf) + aes(long, lat, group=group, fill=rank) + geom_polygon() + coord_equal()
+```
