@@ -42,10 +42,13 @@ ui <- navbarPage(
 
 server <- function(input, output, session) {
   output$plot_births <- renderPlot({
+    
+    dynamic_title <- paste("Births by State in", input$year)
+    
     ggplot(auBirth, aes(x = Region, y = .data[[input$year]], fill = "#9325be")) +
     scale_fill_manual(values = "#9325be") +
     geom_bar(stat = "identity") +
-    labs(title = "Births by State in 2020",
+    labs(title = dynamic_title,
           x = "State",
           y = "") +
     theme_minimal() +
