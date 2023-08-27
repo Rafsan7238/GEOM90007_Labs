@@ -15,7 +15,15 @@ births_tab <- tabPanel(
   h2('Births in Australia'),
   sidebarLayout(
     sidebarPanel(
-      'Sidebar goes here'
+      selectInput(
+        inputId='year',
+        label='Year',
+        choices=c('2017'='X2017',
+                  '2018'='X2018',
+                  '2019'='X2019',
+                  '2020'='X2020'),
+        selected='X2020'
+      )
     ),
     mainPanel(
       plotOutput('plot_births')
