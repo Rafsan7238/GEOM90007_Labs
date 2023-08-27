@@ -13,7 +13,14 @@ auBirth <- auBirth[order(auBirth$Region),]
 births_tab <- tabPanel(
   title='Births',
   h2('Births in Australia'),
-  plotOutput('plot_births')
+  sidebarLayout(
+    sidebarPanel(
+      'Sidebar goes here'
+    ),
+    mainPanel(
+      plotOutput('plot_births')
+    )
+  )
 )
 
 ui <- navbarPage(
