@@ -2,14 +2,8 @@ library("shiny")
 
 auBirth <- read.csv("Births_summary_with_id.csv", stringsAsFactors = FALSE)
 
-# Convert data to long format for multiple data series (2017-2020)
-auBirth_long <- pivot_longer(auBirth, cols = starts_with("X"), names_to = "Year", values_to = "Births")
-
-# Remove X before years
-auBirth_long$Year <- gsub("X", "", auBirth_long$Year)
-
 # Sort the data by Births in descending order
-auBirth_long <- auBirth_long[order(auBirth_long$Region),]
+auBirth <- auBirth[order(auBirth$Region),]
 
 
 ##################
@@ -32,7 +26,21 @@ ui <- navbarPage(
 ################
 
 server <- function(input, output, session) {
-  
+  output$plot_births <- renderPlot({
+    ggplot(auBirth, aes(x = Region, y = X2020, fill = "#9325be")) +
+    scale_fill_manual(values = "#9325be") +
+    geom_bar(stat = "identity") +
+    labs(title = "Births by State in 2020",
+          x = "State",
+          y = "") +
+    theme_minimal() +
+    theme(axis.title.x = element_text(margin = margin(t = 20)),
+          axis.title = element_text(face = "bold"),
+          plot.title = element_text(face = "bold"),
+          panel.grid.major.x = element_blank(),
+          legend.position = "none") +
+    scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+  })
 }
 
 #############
