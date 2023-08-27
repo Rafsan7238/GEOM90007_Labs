@@ -43,7 +43,7 @@ ui <- navbarPage(
 server <- function(input, output, session) {
   output$plot_births <- renderPlot({
     
-    dynamic_title <- paste("Births by State in", input$year)
+    dynamic_title <- paste("Births by State in", gsub("X", "", input$year))
     
     ggplot(auBirth, aes(x = Region, y = .data[[input$year]], fill = "#9325be")) +
     scale_fill_manual(values = "#9325be") +
