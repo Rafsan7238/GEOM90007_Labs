@@ -4,7 +4,11 @@ library("shiny")
 # USER INTERFACE #
 ##################
 
-ui <- 'Hello world!'
+births_tab <- tabPanel(
+  title='Births',
+  h2('Births in Australia'),
+  plotOutput('plot_births')
+)
 
 ################
 # SHINY SERVER #
