@@ -10,6 +10,11 @@ births_tab <- tabPanel(
   plotOutput('plot_births')
 )
 
+ui <- navbarPage(
+  title='Population growth in Australia',
+  births_tab
+)
+
 ################
 # SHINY SERVER #
 ################
