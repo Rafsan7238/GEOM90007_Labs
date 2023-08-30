@@ -27,7 +27,7 @@ births_tab <- tabPanel(
       )
     ),
     mainPanel(
-      plotOutput('plot_births')
+      girafeOutput('plot_births')
     )
   )
 )
@@ -42,11 +42,11 @@ ui <- navbarPage(
 ################
 
 server <- function(input, output, session) {
-  output$plot_births <- renderPlot({
+  output$plot_births <- renderGirafe({
     
     dynamic_title <- paste("Births by State in", gsub("X", "", input$year))
     
-    ggplot(auBirth, aes(x = Region, y = .data[[input$year]], fill = "#9325be")) +
+    p <- ggplot(auBirth, aes(x = Region, y = .data[[input$year]], fill = "#9325be")) +
     scale_fill_manual(values = "#9325be") +
     geom_bar(stat = "identity") +
     labs(title = dynamic_title,
@@ -59,6 +59,8 @@ server <- function(input, output, session) {
           panel.grid.major.x = element_blank(),
           legend.position = "none") +
     scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+    
+    girafe(ggobj=p, height_svg=4)
   })
 }
 
