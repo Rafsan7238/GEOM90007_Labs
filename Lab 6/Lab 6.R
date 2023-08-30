@@ -46,9 +46,9 @@ server <- function(input, output, session) {
     
     dynamic_title <- paste("Births by State in", gsub("X", "", input$year))
     
-    p <- ggplot(auBirth, aes(x = Region, y = .data[[input$year]], fill = "#9325be")) +
+    p <- ggplot(auBirth, aes(x = Region, y = .data[[input$year]], fill = "#9325be", tooltip = paste(Region,': ',.data[[input$year]], sep = ""), data_id=Region)) +
     scale_fill_manual(values = "#9325be") +
-    geom_bar(stat = "identity") +
+    geom_bar_interactive(stat = "identity") +
     labs(title = dynamic_title,
           x = "State",
           y = "") +
