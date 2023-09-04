@@ -12,6 +12,12 @@ auBirth <- auBirth[order(auBirth$Region),]
 
 hosp_data <- read.csv('Hospitals in Australia with childbirth stats-1.csv')
 
+hosp_data$HospIcon <- 'plus-square'
+hosp_data$HospIcon[hosp_data$Sector == 'Private'] <- 'stethoscope'
+
+hosp_data$HospColor <- 'red'
+hosp_data$HospColor[hosp_data$Sector == 'Private'] <- 'darkred'
+
 ##################
 # USER INTERFACE #
 ##################
@@ -114,9 +120,9 @@ server <- function(input, output, session) {
       leaflet(filtered_hosp_data) %>%
         addProviderTiles(providers$CartoDB) %>%
         addAwesomeMarkers(lng=~Longitude, lat=~Latitude,
-                          icon=awesomeIcons(library='fa',
-                                            icon='plus-square',
-                                            markerColor='red',
+                          icon=~awesomeIcons(library='fa',
+                                            icon=HospIcon,
+                                            markerColor=HospColor,
                                             iconColor='#ffffff'), 
                           label=~Name)
   })
