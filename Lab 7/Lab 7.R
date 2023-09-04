@@ -39,6 +39,11 @@ trends_tab <- tabPanel(
   plotOutput('plot_trends')
 )
 
+hospitals_tab <- tabPanel(
+  title='Hospitals',
+  leafletOutput('map_hospitals', height=600)
+)
+
 ui <- navbarPage(
   title='Population Growth in Australia',
   births_tab,
