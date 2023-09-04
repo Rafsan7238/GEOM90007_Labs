@@ -10,6 +10,7 @@ auBirth <- read.csv("Births_summary_with_id.csv", stringsAsFactors = FALSE)
 # Sort the data by Births in descending order
 auBirth <- auBirth[order(auBirth$Region),]
 
+hosp_data <- read.csv('Hospitals in Australia with childbirth stats.csv')
 
 ##################
 # USER INTERFACE #
