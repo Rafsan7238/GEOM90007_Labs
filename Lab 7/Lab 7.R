@@ -50,7 +50,8 @@ hospitals_tab <- tabPanel(
 ui <- navbarPage(
   title='Population Growth in Australia',
   births_tab,
-  trends_tab
+  trends_tab,
+  hospitals_tab
 )
 
 ################
