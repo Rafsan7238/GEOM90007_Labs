@@ -20,7 +20,9 @@ hosp_data$HospColor[hosp_data$Sector == 'Private'] <- 'darkred'
   
 makeHospitalPopup <- function(row) {
   paste0(strong(row$Name), br(),
-         'Sector: ', row$Sector)
+         'Sector: ', row$Sector, br(),
+         'Childbirths (2012): ', row$Childbirths.2012, br(),
+         'Childbirths (2021): ', row$Childbirths.2021)
 }
 
 hosp_data$Popup <- by(hosp_data, seq_len(nrow(hosp_data)), makeHospitalPopup)
