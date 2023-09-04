@@ -10,7 +10,7 @@ auBirth <- read.csv("Births_summary_with_id.csv", stringsAsFactors = FALSE)
 # Sort the data by Births in descending order
 auBirth <- auBirth[order(auBirth$Region),]
 
-hosp_data <- read.csv('Hospitals in Australia with childbirth stats.csv')
+hosp_data <- read.csv('Hospitals in Australia with childbirth stats-1.csv')
 
 ##################
 # USER INTERFACE #
@@ -109,8 +109,9 @@ server <- function(input, output, session) {
   })
   
   output$map_hospitals <- renderLeaflet({
-      leaflet() %>%
-        addProviderTiles(providers$CartoDB)
+      leaflet(hosp_data) %>%
+        addProviderTiles(providers$CartoDB) %>%
+        addAwesomeMarkers(lng=~Longitude, lat=~Latitude, label=~Name)
   })
 }
 
