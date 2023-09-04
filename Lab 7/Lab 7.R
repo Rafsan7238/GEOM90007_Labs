@@ -17,6 +17,13 @@ hosp_data$HospIcon[hosp_data$Sector == 'Private'] <- 'stethoscope'
 
 hosp_data$HospColor <- 'red'
 hosp_data$HospColor[hosp_data$Sector == 'Private'] <- 'darkred'
+  
+makeHospitalPopup <- function(row) {
+  paste0(strong(row$Name), br(),
+         'Sector: ', row$Sector)
+}
+
+hosp_data$Popup <- by(hosp_data, seq_len(nrow(hosp_data)), makeHospitalPopup)
 
 ##################
 # USER INTERFACE #
@@ -54,7 +61,7 @@ hospitals_tab <- tabPanel(
   sidebarLayout(
     sidebarPanel(
       selectInput(
-        'region',
+        inputId='region',
         label = 'State or territory',
         choices = c('All', sort(unique(hosp_data$State))),
         selected = 'All'
@@ -129,7 +136,7 @@ server <- function(input, output, session) {
   # A reactive data filter
   getFilteredHospData <- reactive({
     filter(hosp_data, 
-           if (input$region == 'All') TRUE else State == input$region)
+           if (input$region == 'All') TRUE else hosp_data$State == input$region)
   })
   
   output$map_hospitals <- renderLeaflet({
@@ -142,7 +149,8 @@ server <- function(input, output, session) {
                                             icon=HospIcon,
                                             markerColor=HospColor,
                                             iconColor='#ffffff'), 
-                          label=~Name)
+                          label=~Name,
+                          popup=~Popup)
   })
 }
 
