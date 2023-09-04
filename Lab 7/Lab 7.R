@@ -1,5 +1,6 @@
 library("shiny")
 library("ggiraph")
+library('leaflet')
 
 auBirth <- read.csv("Births_summary_with_id.csv", stringsAsFactors = FALSE)
 
