@@ -116,7 +116,8 @@ server <- function(input, output, session) {
         addAwesomeMarkers(lng=~Longitude, lat=~Latitude,
                           icon=awesomeIcons(library='fa',
                                             icon='plus-square',
-                                            markerColor='red'), 
+                                            markerColor='red',
+                                            iconColor='#ffffff'), 
                           label=~Name)
   })
 }
