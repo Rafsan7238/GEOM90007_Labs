@@ -106,6 +106,11 @@ server <- function(input, output, session) {
             panel.grid.minor = element_line(color = "white")) +
       guides(color = guide_legend(override.aes = list(size = 2)))  # Adjust legend symbol size
   })
+  
+  output$map_hospitals <- renderLeaflet({
+      leaflet() %>%
+        addProviderTiles(providers$CartoDB)
+  })
 }
 
 #############
