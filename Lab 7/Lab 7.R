@@ -113,7 +113,11 @@ server <- function(input, output, session) {
       
       leaflet(filtered_hosp_data) %>%
         addProviderTiles(providers$CartoDB) %>%
-        addAwesomeMarkers(lng=~Longitude, lat=~Latitude, label=~Name)
+        addAwesomeMarkers(lng=~Longitude, lat=~Latitude,
+                          icon=awesomeIcons(library='fa',
+                                            icon='plus-square',
+                                            markerColor='red'), 
+                          label=~Name)
   })
 }
 
