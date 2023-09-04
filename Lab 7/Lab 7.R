@@ -109,7 +109,9 @@ server <- function(input, output, session) {
   })
   
   output$map_hospitals <- renderLeaflet({
-      leaflet(hosp_data) %>%
+      filtered_hosp_data <- hosp_data[hosp_data$Childbirths.total != 0, ]
+      
+      leaflet(filtered_hosp_data) %>%
         addProviderTiles(providers$CartoDB) %>%
         addAwesomeMarkers(lng=~Longitude, lat=~Latitude, label=~Name)
   })
