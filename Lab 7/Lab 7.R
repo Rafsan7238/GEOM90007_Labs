@@ -51,7 +51,19 @@ trends_tab <- tabPanel(
 
 hospitals_tab <- tabPanel(
   title='Hospitals',
-  leafletOutput('map_hospitals', height=600)
+  sidebarLayout(
+    sidebarPanel(
+      selectInput(
+        'region',
+        label = 'State or territory',
+        choices = c('All', sort(unique(hosp_data$State))),
+        selected = 'All'
+      )
+    ),
+    mainPanel(
+      leafletOutput('map_hospitals', height=600)
+    )
+  )
 )
 
 ui <- navbarPage(
