@@ -126,6 +126,12 @@ server <- function(input, output, session) {
       guides(color = guide_legend(override.aes = list(size = 2)))  # Adjust legend symbol size
   })
   
+  # A reactive data filter
+  getFilteredHospData <- reactive({
+    filter(hosp_data, 
+           if (input$region == 'All') TRUE else State == input$region)
+  })
+  
   output$map_hospitals <- renderLeaflet({
       filtered_hosp_data <- hosp_data[hosp_data$Childbirths.total != 0, ]
       
