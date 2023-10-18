@@ -36,6 +36,7 @@ ui <- fluidPage(
       margin: auto;
       display: block;
     }
+    
   "))
   ),
   
@@ -44,7 +45,7 @@ ui <- fluidPage(
     box(
       title = "Filter Your Choice", solidHeader = TRUE, width = 3, height = "450px",
       numericInput("numberOfHotelPeople", "Number of People:", value = 1, min = 1, max = 16, step = 1),  # Numeric input for the number of people
-      sliderInput("hotelPriceRange", "Price Range", min = 0, max = 15000, value = c(200, 3000), step = 400, pre = "$", sep = ",", animate = FALSE),  # Slider input for price range
+      sliderInput("hotelPriceRange", "Price Range", min = 0, max = 15000, value = c(200, 3000), step = 100, pre = "$", sep = ",", animate = FALSE),  # Slider input for price range
       selectInput(
         "roomType",
         label = "Room Type",
@@ -115,7 +116,7 @@ server <- function(input, output, session) {
     hotelHostData <- hotelData %>% filter(id == hotelIDrecord$x)
     
     if (nrow(hotelHostData) == 0) {
-      return("Please select a hotel from the map or table")
+      return("Please select an accommodation from the map or table")
     }
     else {
       # Ensure NA or empty values are displayed as "None" or a placeholder
@@ -302,7 +303,7 @@ server <- function(input, output, session) {
   output$hotelRoomInfo <- renderText({
     hotelRoomData <- hotelData %>% filter(id == hotelIDrecord$x)
     if (nrow(hotelRoomData) == 0) {
-      paste("Please select the house from the map by clicking the marker or select in the table")
+      paste("Please select an accommodation from the map or table")
     } else {
       amenities_string <- paste(as.character(unlist(hotelRoomData$amenities)), collapse = ", ")
       amenities_list <- fromJSON(amenities_string)
@@ -318,7 +319,7 @@ server <- function(input, output, session) {
     <td>", hotelRoomData$name.x, "</td>
   </tr>
   <tr>
-    <td><b>Price</b></td>
+    <td><b>Price Per Night (AUD)</b></td>
     <td>", hotelRoomData$price.x, "</td>
   </tr>
   <tr>
